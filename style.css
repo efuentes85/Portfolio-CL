@@ -1,0 +1,111 @@
+/*   COMENTARIO      */
+
+/* A todos los h1 y el h2 del documento seran aplicados este estilo*/
+h1{   
+	/*color:rgb(255,255,255);*/
+	color:#A00000;
+	text-align:center;
+	font-family: Arial;
+	font-size: 50pt;
+
+}
+/*Selector por  elemento, todos los elementos van a tener esas propiedades*/
+
+
+
+ul{
+
+	list-style: armenian;
+}
+
+ol{
+	list-style:upper-roman;
+	list-style-image: url();
+
+
+}
+
+
+p.wiki{
+
+	text-align: center;
+	line-height: 1em;
+	text-decoration: overline;
+	text-transform: uppercase;
+
+}
+
+
+p.negrita{
+
+	font-weight: bold;
+	font-style:italic;
+	font-family: Arial,Tahoma,sans-serif;
+	background-image: url('Imagenes/18599.png');
+	border-color: #FF9900;
+	border-width: 3px;
+	border-style: solid;
+
+	width: 100%;
+	height: 300px;
+
+	text-align: center;
+	letter-spacing: 3px;
+	word-spacing: 5px;
+
+
+
+}
+
+p {
+	color:red;
+}
+
+/* Se puede navegar por los tags para poner un estilo especial, en este caso todos los article 
+que tengan un p, tendran el color "purple"*/
+article p {
+	color:purple;
+}
+
+/*Selector por ID se ocupa el #*/
+
+#firma {
+	color:pink;
+}
+
+/* Selector por clase, se utiliza el "."  */
+
+.cuerpo {
+
+	background: grey;
+}
+
+
+/* Una manera de hacer el CSS más eficiente es darle especificamente
+el lugar donde queremos aplicar el estilo, en el ejemplo es en todo aside, cuyo id sea "relacionado"*/
+aside#relacionado {
+	background: green;
+}
+aside p{
+	color:white;
+}
+
+/*Otro ejemplo de utilizar el elemento p, pero cuando la clase sea "destacado"*/
+p.destacado{
+	color:red;
+}
+
+body{
+
+	background-image: url('Imagenes/colorful-triangles-background.jpg');
+	background-position: center center;
+
+}
+
+
+
+
+
+
+
+
