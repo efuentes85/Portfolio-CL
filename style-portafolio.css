@@ -14,10 +14,10 @@ header{
 
 }
 
-
+/*Estilo para el Menu*/
 nav{
 	top: -20px;
-	position:absolute;
+	position:fixed;
 	left: 0;
 	right: 0;
 	margin:20px auto;
@@ -26,21 +26,15 @@ nav{
 	font-family: Tahoma;
 	
 }
-
-
 nav ul {
 	list-style: none;
-
 }
 
-
 nav > ul {
-
 	display: table;
 	width: 100%;
 	background:#000;
 	position: relative;
-
 }
 
 nav > ul  li {
@@ -134,6 +128,8 @@ nav ul li a .quinto{
 	background: #37a4d9;
 }
 
+/* Hasta aqui es el estilo para el menu!!*/
+
 body{
 	background:url('Imagenes/colorful-triangles-background.jpg') no-repeat left top;
 	/*Tambien podria ocupar background-image: url('Imagenes/colorful-triangles-background.jpg');*/
@@ -141,20 +137,23 @@ body{
 
 section#container{
 	margin: auto;
-	width:1000px;
-	height:800px;
+	width: auto;
+	max-width: 1000px;
+	height:auto;
+	max-width: 1200px;
 	margin-right: auto;
 	margin-left: auto;
 	background-color: #ccc;
 }
 
 
-section#banner{
-
-	margin-top: 100px;
-	width:1000px;
-	height: 500px;
-	background-image: url('IImagenes/18595.png');
+#banner{
+	margin-top: 5px;
+	width:auto;
+	height:auto;
+	margin: 0 auto ;
+	background-image: url('Imagenes/creating-perfect-workspace-personal.jpg');
+	
 }
 
 
