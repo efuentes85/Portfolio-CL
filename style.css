@@ -72,6 +72,17 @@ nav ul li#logo{
 
 }
 
+
+
+p#leyenda-staff {
+
+	text-align: center;
+	font-size:30px;
+	font-family: 'Lobster', cursive;
+
+}
+
+
 #buscador {  
 
 	position: relative;
@@ -87,4 +98,59 @@ nav ul li#logo{
     padding: 12px 20px 12px 40px;
     left:350px;
 
+}
+
+#secciones {
+	margin: 110px auto;
+	width:1000px;
+	height: 500px;
+	background-color: white;
+}
+
+
+
+.item {
+
+	
+	width:300px;
+	height:325px;
+	/*background-color: green;*/
+	float: left;
+	margin: 5px 10px;
+	text-align: center
+	
+
+}
+
+
+
+
+.circle {
+
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	margin-top: 5px;
+}
+
+
+#item1{
+
+
+
+
+}
+
+
+#item2{
+
+	
+	
+}
+
+#item3{
+
+	
+	
+	
 }
