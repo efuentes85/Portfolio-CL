@@ -8,84 +8,113 @@
 
 body {
 	background-color:#ccc;
+
 }
 
 
 #container{
-	background-color: #f90;
-	height: 50px;
-	width: 1000px;
-	margin: 15px auto;
+	background-color: #fff;
+	width: 90%;
+	margin:auto;
+	height:100%;	
+		
+	/*Flexbox*/
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+
+
+
+
 }
 
 
-#menu{
+
+header {
+	width:100%;
+	padding:10px;
+	color:#004d33;
+	/* Flex padre de los elementos dentro del header
+		en este caso tenemos .logo , nav */
+	display: flex;
+	justify-content:space-around;
+	align-items:center;
+	flex-direction:row;
+	flex-wrap:wrap;
+
+}
+
+header .logo {
 	
-	display:inline;
-	margin: 20px auto;
-	text-align: right;
+	color:#fff;
+	font-size: 25px;
+	
 }
 
-nav ul li {
-	display: inline;
-	padding-left: 20px;
-	padding-right: 20px;
-	margin: auto;
-	font-family: 'Russo One', sans-serif;
+header .logo img {
+	width: 100px;
+	vertical-align: top;
 }
 
-nav ul li a {
+header .logo a {
+	color: #000;
 	text-decoration: none;
-}
-
-
-nav ul li#logo{
-
-	position: relative;
-	left: -800px;
+	line-height: 75px;
+	font-family: 'Lobster', cursive;
 
 }
 
+
+header nav {
+	width: 50%;
+	
+	/* Flex padre de los elementos adentro del nav */
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+}
+
+header nav a {
+	background-color: #004d33;
+	color:#fff;
+	text-align: center;
+	text-decoration: none;
+	padding:10px;
+
+	/*Flex hijo del contenedor*/
+	flex-grow:1; 	/* con esta propiedad hago que se ocupe todo el 
+					espacio del nav y que se centren los elementos, al
+					ser un hijo del nav que es "flex" , puedo utilizar 
+					esta propiedad*/
+	
+
+}
 
 #banner {
-	position: relative;
-	margin-top: 15px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 1000px;
-	height: 260px;
-	/*background:url('Imagenes/banner2.jpg');*/
-}
-
-
-
-#leyenda{
-
-	display: inline;
-	position: absolute;
-	margin-left:275px;
-	margin-top: -70px;
-	color: #ffff00;
-	font-size:43px;
-	font-family: 'Lobster', cursive;
+	width: 100%;
+	display:flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-flow: column;
 
 
 }
 
+#banner img {
+	width:100%;
 
+	
+}
 
-p#leyenda-staff {
-
-	text-align: center;
-	font-size:30px;
-	font-family: 'Lobster', cursive;
-
+#banner #buscador{
+		margin-top: 20px;
 }
 
 
 #buscador {  
-
-	position: relative;
+	/*position: relative;*/
+	align-self: center;
 	width: 300px;
 	height: 15px;
     border: 2px solid #ccc;
@@ -100,30 +129,42 @@ p#leyenda-staff {
 
 }
 
+
+p#leyenda-staff {
+	width: 100%;
+	text-align: center;
+	font-size:30px;
+	font-family: 'Lobster', cursive;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+}
+
+
 #secciones {
-	margin: 110px auto;
-	width:1000px;
-	height: 500px;
+	
+	width:100%;
+	height: 100%;
 	background-color: white;
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	/*align-items: center;*/
 }
 
 
 
 .item {
 
-	
 	width:300px;
-	height:325px;
+/*	height:325px;*/
 	/*background-color: green;*/
-	float: left;
-	margin: 5px 10px;
-	text-align: center
-	
-
+	/*float: left;*/
+	/*margin: 5px 10px;*/
+	text-align: center;
+	margin-top: 20px;
 }
-
-
-
 
 .circle {
 
@@ -134,23 +175,215 @@ p#leyenda-staff {
 }
 
 
-#item1{
+p.parrafo {
+
+	font-family: 'Alegreya Sans', sans-serif;
+	font-size: 20px;
+	text-align: left;
+
+}
+
+hr {
+  border: 0;
+  width: 80%;
+  margin-top: 20px;
+  height: 10px;
+}
+
+
+hr.style-two {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+
+
+#cajas {
+
+	width:100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: space-around;
+	margin-bottom: 20px;
+	margin-top:20px;
 
 
 
 
 }
 
+#cajas img{
+	width:100px;
+	height: 100px;
+}
 
-#item2{
 
+
+#cajas .item{
+	width: 300px;
+	height: 200px;
+/*	background-color: #4040a1;*/
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-content: space-around;
 	
+
+}
+
+#cajas #comentarios {
+	display:flex;
+	flex-direction: column;
+	justify-content:space-around;
+	align-content:space-around;
+
+
+
+}
+
+
+#cajas .item #foto{
+	margin-top: 20px;
+}
+
+#cajas .item #titulo {
+	margin-top: 10px;
+	padding-left:40px;
+	align-self: flex-start;
 	
 }
 
-#item3{
+#cajas .item #likes {
+	padding-left:200px;
+	align-self: center;
 
-	
-	
-	
 }
+
+#cajas .item #comentario {
+	padding-left:40px;
+	align-self: flex-start;
+		
+}
+
+
+
+
+footer {
+	
+	width: 100%;
+	height: 50px;
+	padding: 10px;
+	background-color:#fff;
+
+}
+
+
+footer nav {
+	width: 50%;
+	
+	/* Flex padre de los elementos adentro del nav */
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+}
+
+footer nav a {
+	background-color: #004d33;
+	color:#fff;
+	text-align: center;
+	text-decoration: none;
+	padding:10px;
+
+	/*Flex hijo del contenedor*/
+	flex-grow:1; 	/* con esta propiedad hago que se ocupe todo el 
+					espacio del nav y que se centren los elementos, al
+					ser un hijo del nav que es "flex" , puedo utilizar 
+					esta propiedad*/
+	
+
+}
+
+
+
+/*
+#test {
+	height: 100%;
+	width: 800px;
+	background-color: #c0a;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.test  {
+	margin:30px;
+	height: 300px;
+	width: 200px;
+	background-color: blue;
+	font-size: 40px;
+	font-color:#fff;
+}
+*/
+
+
+
+/*==========  Mobile First Method  ==========*/
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+        
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+    }
+
+
+
+    /*==========  Non-Mobile First Method  ==========*/
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+
+    }
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+        
+    }
